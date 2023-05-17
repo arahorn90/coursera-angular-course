@@ -1,0 +1,7 @@
+<ul>
+    <li ng-repeat="item in menuData.foundItem" class="flexbox">
+        <p><strong>{{ item.short_name }} {{ item.name }}</strong><br> {{ item.description }}</p>
+        <p><button ng-click="menuData.onRemove({ind : $index});">Don't want this one!</button></p>
+    </li>
+</ul>
+<div class="alert alert-danger" role="alert" ng-show="menuData.onEmpty">{{menuData.onEmpty}}</div>

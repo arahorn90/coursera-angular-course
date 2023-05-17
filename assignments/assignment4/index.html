@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Weeee! Restaurant Menu App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+    <script src="modules/menuapp.module.js"></script>
+    <script src="modules/data.module.js"></script>
+    <script src="controllers/categories.controller.js"></script>
+    <script src="controllers/items.controller.js"></script>
+    <script src="services/menudata.service.js"></script>
+    <script src="components/categories.component.js"></script>
+    <script src="components/items.component.js"></script>
+    <script src="routes/routes.js"></script>
+    <script src="htmls/home.htmls.html"></script>
+    <script src="htmls/categories.component.html"></script>
+    <script src="htmls/categories.htmls.html"></script>
+    <script src="htmls/items.component.html"></script>
+    <script src="htmls/items.htmls.html"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li ui-sref-active="active" ui-sref="home" role="presentation"><a href="#">Home</a></li>
+                    <li ui-sref-active="active" ui-sref="categories" role="presentation"><a href="#">Categories</a></li>
+                </ul>
+            </nav>
+            <h3>My Weeee! Restaurant Menu App</h3>
+        </div>
+        <ui-view></ui-view>
+    </div>
+</body>
+
+</html>
